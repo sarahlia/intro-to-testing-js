@@ -45,3 +45,28 @@ describe('sayHello', function() {
 });
 
 
+const randomPositiveNumber = Math.ceil(Math.random() * 100);
+const randomNegativeNumber = Math.ceil(Math.random() * 100) * -1;
+
+describe('isFive', function() {
+    it('should be a defined function', function() {
+        expect(typeof isFive).toBe('function');
+    });
+    it('should return a boolean value', function() {
+        expect(typeof isFive(5)).toBe('boolean');
+        expect(typeof isFive("Bob")).toBe('boolean');
+    });
+    it('should return true when passed a number', function() {
+        expect(isFive(randomPositiveNumber).toBe(true));
+        expect(isFive(randomNegativeNumber).toBe(true));
+    });
+    it('should return true when the input passed is the numeric string "123".', function() {
+        expect(isString("123")).toBe(true);
+    });
+    it('should return true when the input is the numeric string "' + randomPositiveNumber + '".', function() {
+        expect(isString(String(randomPositiveNumber))).toBe(true);
+    });
+    it('should return true when the input is the numeric string "' + randomNegativeNumber + '".', function() {
+        expect(isString(String(randomNegativeNumber))).toBe(true);
+    });
+});

@@ -16,4 +16,10 @@ function sayHello(input) {
         //     return "Hello, Jane!";
 }
 
-
+function isFive(inp) {
+    if (typeof inp === "number") {
+        return true;
+    } else {
+        return false;
+    }
+}
