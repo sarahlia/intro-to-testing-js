@@ -4,5 +4,6 @@ const helloWorld = function() {
 }
 
 function sayHello() {
-
+    return "Hello";
 }
+
