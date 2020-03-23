@@ -17,9 +17,5 @@ function sayHello(input) {
 }
 
 function isFive(inp) {
-    if (typeof inp === "number") {
-        return true;
-    } else {
-        return false;
-    }
+    return parseInt(inp) === 5;
 }
