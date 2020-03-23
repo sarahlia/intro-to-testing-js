@@ -4,13 +4,16 @@ const helloWorld = function() {
 }
 
 function sayHello(input) {
-    return "Hello, " + input + "!";
-    // if (input === "Alex") {
-    //     return "Hello, Alex!";
-    // } else if (input === "Pat") {
-    //     return "Hello, Pat!";
-    // } else {
-    //     return "Hello, Jane!";
-    // }
+    if ((input === undefined) || (typeof input === "boolean") || (input === null) || (input === "") || (typeof input === "number")) {
+        return "Hello, World!";
+    }
+        return "Hello, " + (input) + "!";
+        // if (input === "Alex") {
+        //     return "Hello, Alex!";
+        // } else if (input === "Pat") {
+        //     return "Hello, Pat!";
+        // } else {
+        //     return "Hello, Jane!";
 }
+
 
