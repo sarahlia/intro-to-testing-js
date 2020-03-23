@@ -4,7 +4,7 @@ const helloWorld = function() {
 }
 
 function sayHello(input) {
-    if ((input === undefined) || (typeof input === "boolean") || (input === null) || (input === "") || (typeof input === "number")) {
+    if ((input === undefined) || (typeof input === "boolean") || (input === null) || (input === "") || (isNaN(input) === false) || (typeof input === "number") || (Array.isArray(input) === true)) {
         return "Hello, World!";
     }
         return "Hello, " + (input) + "!";
