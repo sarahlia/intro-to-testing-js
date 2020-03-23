@@ -19,3 +19,8 @@ function sayHello(input) {
 function isFive(inp) {
     return parseInt(inp) === 5;
 }
+
+function isEven(inp) {
+    return parseInt(inp) % 2 === 0;
+}
+

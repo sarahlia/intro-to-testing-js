@@ -44,9 +44,9 @@ describe('sayHello', function() {
     });
 });
 
-
-const randomPositiveNumber = Math.ceil(Math.random() * 100);
-const randomNegativeNumber = Math.ceil(Math.random() * 100) * -1;
+//
+// const randomPositiveNumber = Math.ceil(Math.random() * 100);
+// const randomNegativeNumber = Math.ceil(Math.random() * 100) * -1;
 
 describe('isFive', function() {
     it('should be a defined function', function() {
@@ -68,4 +68,41 @@ describe('isFive', function() {
     // it('should return true when the input is the numeric string "' + randomNegativeNumber + '".', function() {
     //     expect(isString(String(randomNegativeNumber))).toBe(true);
     // });
+});
+
+describe('isEven', function() {
+    it('should be a defined function', function() {
+        expect(typeof isEven).toBe('function');
+    });
+    it('should return a boolean value', function() {
+        expect(typeof isEven(6)).toBe('boolean');
+        expect(typeof isEven("Bob")).toBe('boolean');
+    });
+    it('should return true when passed 2', function() {
+        expect(isEven(2)).toBe(true);
+    });
+    it('should return true when passed -4', function() {
+        expect(isEven(-4)).toBe(true);
+    });
+    it('should return false when passed the number 3', function() {
+        expect(isEven(3)).toBe(false);
+    });
+    it('should return false when passed a string like "banana"', function() {
+        expect(isEven("banana")).toBe(false);
+    });
+    it('should return true when passed "8"', function() {
+        expect(isEven("8")).toBe(true);
+    });
+    it('should return false when passed Infinity', function() {
+        expect(isEven(Infinity)).toBe(false);
+    });
+    it('should return false when passed the boolean value ' + true, function() {
+        expect(isEven(true)).toBe(false);
+    });
+    it('should return false when passed the boolean value ' + false, function() {
+        expect(isEven(false)).toBe(false);
+    });
+    it('should return false when called without an argument', function() {
+        expect(isEven()).toBe(false);
+    });
 });
