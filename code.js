@@ -24,3 +24,20 @@ function isEven(inp) {
     return parseInt(inp) % 2 === 0;
 }
 
+function isVowel(inp) {
+    // if (typeof inp === "string") {
+    //     return true;
+    // } else if (inp === "y") {
+    //         return false;
+    // } else
+    // if (inp === "y") {
+    //     return false;
+    // }
+    if (typeof inp === "string") {
+        return inp.toLowerCase() === "a" || inp.toLowerCase() === "e" || inp.toLowerCase() === "i" || inp.toLowerCase() === "o" || inp.toLowerCase() === "u";
+        // return true;
+    } else {
+        return false;
+    }
+}
+
