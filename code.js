@@ -41,3 +41,6 @@ function isVowel(inp) {
     }
 }
 
+function add(input1, input2) {
+    return parseInt(input1) + parseInt(input2);
+}
